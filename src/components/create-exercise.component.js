@@ -24,7 +24,7 @@ export default class CreateExercise extends Component {
     componentDidMount() {
         axios.get('http://localhost:5000/users/')
         .then(response => {
-            if(response.data.leength >0) {
+            if(response.data.length >0) {
                 this.setState({
                     users:response.data.map(user => user.username),
                     username: response.data[0].username
@@ -33,7 +33,9 @@ export default class CreateExercise extends Component {
         })
     }
 
+   
     onChangeUsername(e) {
+        console.log(e.target.value)
         this.setState({
             username: e.target.value
         });
@@ -68,6 +70,8 @@ export default class CreateExercise extends Component {
         .then(res => console.log(res.data));
         window.location = '/';
     }
+
+
     render() {
         return (
             <div>
@@ -76,43 +80,51 @@ export default class CreateExercise extends Component {
                     <div className="form-group">
                         <label>Username: </label>
                         <select ref="userInput"
-                        required
-                        className="form-control"
-                        value={this.state.username}
-                        onchange={this.onChangeUsername}>
+                          required
+                          className="form-control"
+                          value={this.state.username}
+                          onChange={this.onChangeUsername}>
                             {
-                                this.state.users.map(function(user){
-                                    return<option
-                                    key={user}
-                                    value={user}>{user}
-                                    </option>
+                                this.state.users.map(function(user) {
+                                    return <option
+                                          key={user}
+                                          value={user}>{user}
+                                        </option>
                                 })
                             }
-
                         </select>
-            </div>
-            <div className="form-group">
-                <label>Description:</label>
-                <input type="text"
-                className="form-control"
-                value={this.state.duration}
-                onChange={this.onChangeDuration}
-                />
-            </div>
-            <div className="form-group">
-                <label>Date: </label>
-                <div>
-                    <DatePicker
-                    selected={this.state.date}
-                    onChange={this.onChangeDate}
-                    />
-                </div>
-            </div>
+                    </div>
+                    <div className="form-group">
+                        <label>Description:</label>
+                        <input type="text"
+                          required
+                        className="form-control"
+                        value={this.state.description}
+                        onChange={this.onChangeDescription}
+                        />
+                        </div>
+                        <div className="form-group">
+                        <label>Duration:</label>
+                        <input type="text"
+                        className="form-control"
+                        value={this.state.duration}
+                        onChange={this.onChangeDuration}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Date: </label>
+                        <div>
+                            <DatePicker
+                            selected={this.state.date}
+                            onChange={this.onChangeDate}
+                            />
+                        </div>
+                    </div>
 
-            <div className="form-group">
-                <input type="submit" value="Create Exercise Log" className="btn btn-primary"/>
-            </div>
-        </form>
+                    <div className="form-group">
+                        <input type="submit" value="Create Exercise Log" className="btn btn-primary"/>
+                    </div>
+                </form>
         </div>
         )
     }

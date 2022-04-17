@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default class CreateUser extends Component{
  constructor(props) {
-     super(props);
+     super(props); 
 
      this.onChangeUsername=this.onChangeUsername.bind(this);
      this.onSubmit=this.onSubmit.bind(this);
@@ -44,11 +44,11 @@ export default class CreateUser extends Component{
                     <input type="text"
                     required
                     className = "form-control"
-                    value={this.sate.username}
+                    value={this.state.username}
                     onChange={this.onChangeUsername}
                     />
                 </div>
-                               
+                <br/>        
                 <div className="form-group">
                     <input type="submit" value="Create User" className="btn btn-primary"/>
                 </div>

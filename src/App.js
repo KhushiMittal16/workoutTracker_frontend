@@ -7,9 +7,11 @@ import {
 } from 'react-router-dom';
 import CreateExercise from './components/create-exercise.component';
 import ExerciseList from "./components/exercise-list.component";
-import EditExercise from "./components/edit-exercise.component";
 import CreateUser from './components/create-user.component';
-import Navbar from "./components/navbar.components"
+// import EditExercise from './components/edit-exercise.component';
+import Navbar from "./components/navbar.components";
+import { About } from './components/About';
+import { ExcerciseDemo } from './components/ExcerciseDemo';
 function App() {
   return (
     <Router>
@@ -17,9 +19,11 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" exact element={<ExerciseList/>}/>
-        <Route path="/edit/:id" element={<EditExercise/>}/>
+        <Route path="/exercisetutorials" element={<ExcerciseDemo/>}/>
         <Route path="/create" element={<CreateExercise/>}/>
         <Route path="/user" element={<CreateUser/>}/>
+        <Route path="/About" element={<About/>}/>
+        <Route path="/videos" element={<beginner/>}/>
       </Routes>
     </div>
     </Router>
