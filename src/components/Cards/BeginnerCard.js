@@ -16,15 +16,17 @@
 // export default Card;
 
 
-import * as React from 'react';
+
+
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom'
 
-export default function MediaCard() {
+export default function MediaCardBeginner() {
   return (
     <Card sx={{ maxWidth: 345, m: 4, }}>
       <CardMedia
@@ -37,14 +39,12 @@ export default function MediaCard() {
         <Typography gutterBottom variant="h5" component="div">
           Beginner Exercises
         </Typography>
-        {/* <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography> */}
+       
       </CardContent>
-      <CardActions>
-        <Button size="small" >Start Now</Button>
-        {/* <Button size="small">Learn More</Button> */}
+      <CardActions className='action'>
+        <Link to="/beginnervideos">
+          start
+        </Link>
       </CardActions>
     </Card>
   );

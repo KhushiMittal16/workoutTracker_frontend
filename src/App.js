@@ -12,6 +12,10 @@ import CreateUser from './components/create-user.component';
 import Navbar from "./components/navbar.components";
 import { About } from './components/About';
 import { ExcerciseDemo } from './components/ExcerciseDemo';
+import { Beginner } from './videos/Beginner';
+import { Intermediate } from './videos/Intermediate';
+import { Advance } from './videos/Advance';
+
 function App() {
   return (
     <Router>
@@ -23,7 +27,9 @@ function App() {
         <Route path="/create" element={<CreateExercise/>}/>
         <Route path="/user" element={<CreateUser/>}/>
         <Route path="/About" element={<About/>}/>
-        <Route path="/videos" element={<beginner/>}/>
+        <Route path="/beginnervideos" element={<Beginner/>}/>
+        <Route path="/intermediatevideos" element={<Intermediate/>}/>
+        <Route path="/advancedvideos" element={<Advance/>}/>
       </Routes>
     </div>
     </Router>
