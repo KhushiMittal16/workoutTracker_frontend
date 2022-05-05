@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom'
+import '../../CSS/card.css'
 
 export default function MediaCardIntermediate() {
   return (
@@ -12,8 +13,8 @@ export default function MediaCardIntermediate() {
       <CardMedia
         component="img"
         height="300"
-        image="https://thumbs.gfycat.com/AdolescentDirtyAngelwingmussel-max-1mb.gif"
-        alt="beginner Workout image"
+        image="https://i0.wp.com/thumbs.gfycat.com/DeliriousJaggedGoldfish-size_restricted.gif?h=840"
+        alt="beginner Workout image" 
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -22,8 +23,8 @@ export default function MediaCardIntermediate() {
        
       </CardContent>
       <CardActions className='action'>
-        <Link to="/intermediatevideos">
-          start
+        <Link to="/intermediatevideos" style={{ textDecoration: 'none', color:'white'}}>
+          Start
         </Link>
       </CardActions>
     </Card>

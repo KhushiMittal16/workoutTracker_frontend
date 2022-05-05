@@ -68,7 +68,7 @@ export default class CreateExercise extends Component {
         console.log(exercise);
         axios.post('http://localhost:5000/exercises/add',exercise)
         .then(res => console.log(res.data));
-        window.location = '/';
+        window.location = '/exerciselist';
     }
 
 
@@ -120,7 +120,7 @@ export default class CreateExercise extends Component {
                             />
                         </div>
                     </div>
-
+                        <br/>
                     <div className="form-group">
                         <input type="submit" value="Create Exercise Log" className="btn btn-primary"/>
                     </div>

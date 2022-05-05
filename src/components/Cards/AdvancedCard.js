@@ -4,7 +4,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import '../../CSS/card.css';
 
 export default function MediaCardAdvanced() {
   return (
@@ -12,7 +13,7 @@ export default function MediaCardAdvanced() {
       <CardMedia
         component="img"
         height="300"
-        image="https://i0.wp.com/thumbs.gfycat.com/DeliriousJaggedGoldfish-size_restricted.gif?h=840"
+        image="https://thumbs.gfycat.com/BrightCriminalHippopotamus-size_restricted.gif"
         alt="beginner Workout image"
       />
       <CardContent>
@@ -22,8 +23,8 @@ export default function MediaCardAdvanced() {
        
       </CardContent>
       <CardActions className='action'>
-        <Link to="/advancedvideos">
-          start
+        <Link to="/advancedvideos" style={{ textDecoration: 'none', color:'white'}}>
+          Start
         </Link> 
       </CardActions>
     </Card>

@@ -1,0 +1,7 @@
+.action{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(5, 5, 5);
+    font-size:25px;
+}
